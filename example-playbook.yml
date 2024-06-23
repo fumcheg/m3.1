@@ -1,0 +1,19 @@
+- name: Install packages
+  hosts: yusufov
+
+  tasks:
+  - name: Install cmatrix
+    become: yes
+    ansible.builtin.apt:
+      name: cmatrix
+      state: present
+  - name: Install cowsay
+    become: yes
+    ansible.builtin.apt:
+      name: cowsay
+      state: present
+  - name: Install sl
+    become: yes
+    ansible.builtin.apt:
+      name: sl
+      state: present

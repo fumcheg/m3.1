@@ -2,6 +2,10 @@
   hosts: yusufov
 
   tasks:
+  - name: Vars import
+    ansible.builtin.include_vars:
+      file: "/home/fumo/Documents/vault.yml"
+
   - name: Install cmatrix
     become: yes
     ansible.builtin.apt:
